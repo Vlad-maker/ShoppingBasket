@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import * as constants from "../constants/products";
 
 const initialState = {
     items: [
@@ -10,12 +10,12 @@ const initialState = {
     ],
 };
 
-function myReducer(state = initialState, action) {
+export default function productsReducer(state = initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
 
-        case "Добавить продукт":
+        case constants.ADD_PRODUCT:
             return {
                 ...state,
                 items: state.items.map((item) => {
@@ -29,7 +29,7 @@ function myReducer(state = initialState, action) {
                 }),
             };
         
-        case "Убрать продукт":
+        case constants.REMOVE_PRODUCT:
             return {
                 ...state,
                 items: state.items.map((item) => {
@@ -47,5 +47,3 @@ function myReducer(state = initialState, action) {
             return state;
     }
 }
-
-export default createStore(myReducer);
