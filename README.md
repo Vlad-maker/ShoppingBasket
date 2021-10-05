@@ -1,6 +1,7 @@
 # Проект: Shopping Basket 
 Корзина товаров написанная с целью изучения основ React Redux.
 
+[Click to try the app](https://vlad-maker.github.io/ShoppingBasket/)
 
 **Технологии:** 
 
